@@ -1,0 +1,17 @@
+body{
+ background: url("../img/bit.png") no-repeat right fixed;
+ background-size: cover;
+}
+h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 80px  !important;
+    text-shadow: 2px 2px #FFBD59;
+    color: #FFDE59;
+}
+#txt{
+    margin-top: 25vh;
+}
+#logo{
+    width: 90px;
+    height: 90px;
+}
