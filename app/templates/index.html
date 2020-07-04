@@ -33,16 +33,14 @@
           </ul>
           <form class="form-inline my-2 my-lg-0 mr-5">
            
-            <button type="button" class="btn btn-outline-light mr-3">Login</button> 
-            <button type="button" class="btn btn-outline-light">Register</button> 
+            <a class="btn btn-outline-light mr-3" href="{{ url_for('login') }}" role="button">Login</a>
+            <a class="btn btn-outline-light mr-4" href="{{ url_for('register') }}" role="button">Register</a> 
           </form>
         </div>
       </nav>
       <section>
-          <div id="txt" class="container text-center">
-              <h1>SHARE IT,</h1>
-              <h1>BLOG IT.</h1>
-          </div>
+         {% block body %}
+         {% endblock %}
       </section>
 </body>
 </html>
