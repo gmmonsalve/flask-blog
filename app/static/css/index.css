@@ -1,5 +1,5 @@
 body{
- background: url("../img/bit.png") no-repeat right fixed;
+ background: url("../img/bg.png") no-repeat left fixed;
  background-size: cover;
 }
 h1{
@@ -14,4 +14,10 @@ h1{
 #logo{
     width: 90px;
     height: 90px;
+}
+.row{
+    max-width: 100%;
+}
+.bcolor{
+    background-color: #6AB5DB !important;
 }
