@@ -1,35 +1,42 @@
 {% extends "index.html" %}
 
 {% block body %}
-<div class="container d-flex justify-content-center">
-    <div class="card bg-light mb-3" style="max-width: 20rem;">
-        <div class="card-header">Login</div>
+  <div class="row">
+    <div class="col-sm">
+      <div id="txt" class="container text-center">
+        <h1>SHARE IT,</h1>
+        <h1>BLOG IT.</h1>
+    </div>
+    </div>
+    <div class="col-sm">
+      <div class="card mt-2 ml-auto mr-auto mb-5" style="max-width: 20rem; min-height: 25rem;">
+        <div class="card-title text-center mt-4 mb-3" style="font-family: 'Baloo 2', cursive; font-size: 25px;">Login</div>
         <div class="card-body">
-          <form action="" method="POST" novalidate>
+          <form action="" method="POST" novalidate class="ml-auto mr-auto">
             {{ form.hidden_tag() }}
-           <p>
+           <p class="ml-2 mr-4">
               {{ form.username.label }}<br>
               {{ form.username(size=25) }}<br>
               {% for error in form.username.errors %}
-              <div class="alert alert-danger" role="alert">
+              <div class="alert alert-danger" style="max-width: 100%;" role="alert">
                {{ error }}
               </div>
               {% endfor %}
           </p>
-
-          <p>
+    
+          <p class="ml-2 mr-4">
               {{ form.password.label }}<br>
               {{ form.password(size=25) }}<br>
               {% for error in form.password.errors %}
-              <div class="alert alert-danger" role="alert">
+              <div class="alert alert-danger" style="max-width: 100%;" role="alert">
                {{ error }}
               </div>
               {% endfor %}
           </p>
-          <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-          <p>{{ form.submit() }}</p>
+          <p class="ml-2 mr-4">{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+          <p style="margin-left: 35%;">{{ form.submit(class_='btn bcolor text-light') }}</p>
           </form>
         </div>
-      </div>
-</div>
+    </div>
+  </div>
 {% endblock %}

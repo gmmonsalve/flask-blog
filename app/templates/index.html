@@ -9,29 +9,37 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet"> 
     <title>Document</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent text-center">
        
-            <a class="navbar-brand ml-5" href="#">
-                <img src="{{ url_for('static', filename='img/logo2.png') }}" width="80" height="50" alt="" loading="lazy">
-              </a>
+            
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <ul class="navbar-nav ml-auto mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
               <a class="nav-link text-light" href="#">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="#">Link</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">Stuff</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">About</a>
+            </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0 mr-5">
+          <a class="navbar-brand mr-auto ml-auto" href="#">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" width="80" height="50" alt="" loading="lazy">
+          </a>
+          <form class="form-inline my-2 my-lg-0 ml-auto mr-auto">
            
             <a class="btn btn-outline-light mr-3" href="{{ url_for('login') }}" role="button">Login</a>
             <a class="btn btn-outline-light mr-4" href="{{ url_for('register') }}" role="button">Register</a> 
