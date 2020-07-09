@@ -4,6 +4,15 @@
   <div class="row">
     <div class="col-sm">
       <div id="txt" class="container text-center">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-success" role="alert">
+                {{ message }}
+              </div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
         <h1>SHARE IT,</h1>
         <h1>BLOG IT.</h1>
     </div>
