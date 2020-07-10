@@ -2,13 +2,14 @@ from flask import render_template, redirect, flash, url_for
 from app import app
 from app.forms import LoginForm
 from app.models import User
-from flask_login import current_user, login_user 
+from flask_login import current_user, login_user, logout_user, login_required
 
 @app.route('/')
 def index():
     return redirect(url_for('login'))
 
 @app.route('/home')
+@login_required
 def home():
     return render_template('home.html')
 
@@ -25,6 +26,11 @@ def login():
         login_user(user,remember=form.remember_me.data)
         return redirect(url_for('home'))
     return render_template('login.html', title='Sign In', form=form)
+
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
 
 @app.route('/register')
 def register():
